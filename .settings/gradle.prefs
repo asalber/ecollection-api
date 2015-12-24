@@ -1,8 +1,8 @@
 {
   "1.0": {
     "project_path": ":",
-    "project_dir": "/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/ecollections-api",
-    "connection_project_dir": "/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/ecollections-api",
+    "project_dir": "/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/ecollections-api/ECollections-API",
+    "connection_project_dir": "/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/ecollections-api/ECollections-API",
     "connection_gradle_user_home": null,
     "connection_gradle_distribution": "GRADLE_DISTRIBUTION(WRAPPER)",
     "connection_java_home": null,
