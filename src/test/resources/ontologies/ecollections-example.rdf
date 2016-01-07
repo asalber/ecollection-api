@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY eco "http://purl.org/ceu/eco#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.example.org/ecollections/example#"
+     xml:base="http://www.example.org/ecollections/example"
+     xmlns:eco="http://purl.org/ceu/eco#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/ecollections/example">
+        <rdfs:label>Example ontology of E-Collections</rdfs:label>
+        <rdfs:comment>Example ontology for testing the E-Collections API.</rdfs:comment>
+        <rdfs:seeAlso>http://aprendeconalf.es/ecollections</rdfs:seeAlso>
+        <owl:imports rdf:resource="http://purl.org/ceu/eco/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/ecollections/example#Element -->
+
+    <owl:Class rdf:about="http://www.example.org/ecollections/example#Element"/>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#ElementA -->
+
+    <owl:Class rdf:about="http://www.example.org/ecollections/example#ElementA">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#ElementB -->
+
+    <owl:Class rdf:about="http://www.example.org/ecollections/example#ElementB">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#ElementC -->
+
+    <owl:Class rdf:about="http://www.example.org/ecollections/example#ElementC">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/ecollections/example#a -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#a">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#a1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#a1">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#a2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#a2">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#a3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#a3">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#b -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#b">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#b1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#b1">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#b2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#b2">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#b3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#b3">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#c -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#c">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#c1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#c1">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#c2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#c2">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#c3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#c3">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#d -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#d">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset1">
+        <rdf:type rdf:resource="&eco;Multiheteroset"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_a1"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_a2"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_a3"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_b1"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_b2"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_c1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset2">
+        <rdf:type rdf:resource="&eco;Multiheteroset"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_a4"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_a5"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_b3"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_c2"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiheteroset_item_c3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_a1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_a1">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_a2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_a2">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_a3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_a3">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_a4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_a4">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_a5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_a5">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_b1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_b1">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#b1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_b2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_b2">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#b1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_b3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_b3">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#b2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_c1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_c1">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#c1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_c2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_c2">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#c1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiheteroset_item_c3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiheteroset_item_c3">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#c1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset1">
+        <rdf:type rdf:resource="&eco;Multiset"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

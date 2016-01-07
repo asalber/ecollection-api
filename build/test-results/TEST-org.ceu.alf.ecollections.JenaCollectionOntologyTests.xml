@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.ceu.alf.ecollections.JenaCollectionOntologyTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-01-07T11:41:22" hostname="alf-laptop" time="2.254">
+  <properties/>
+  <testcase name="intersectionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="2.239"/>
+  <testcase name="unionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.009"/>
+  <testcase name="getMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/alf/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.3/57868006655a34050ad39e78c5b12aa9c74927f7/log4j-slf4j-impl-2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/alf/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.12/485f77901840cf4e8bf852f2abb9b723eb8ec29/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.essepuntato.it/2009/10/error" uri="file:/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/error_ontology.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/ceu/eco/1.0" uri="file:/media/alf/datos/drive/INVESTIGACION/doctorado/tesis/ontologias/ecollections/1.0/ecollections.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1451647079428" name="http://www.co-ode.org/ontologies/pizza/pizza.owl" uri="pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1451647079428" name="http://www.example.org/ecollections/example" uri="ecollections-example.rdf"/>
+    </group>
+</catalog>
