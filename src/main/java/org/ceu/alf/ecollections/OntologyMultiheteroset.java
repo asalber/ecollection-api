@@ -10,18 +10,6 @@ import com.google.common.collect.Multiset;
  * @author Alfredo Sánchez Alberca (asalber@ceu.es)
  */
 public interface OntologyMultiheteroset extends OntologyCollection {
-  /**
-   * The URI for the Collection class in the E-Collections ontology.
-   */
-  public static final URI MultiheterosetUri = URI.create("http://purl.org/ceu/eco#Multiheteroset");
-
-  /**
-   * Method that returns a reference to the GUAVA {@code Multiset<string>} used to store
-   * multiheterosets.
-   * 
-   * @return the GUAVA {@code Multiset<string>} that contains the multiheteroset.
-   */
-  public Multiset<String> getMultiset();
 
   /**
    * Method that add a resource or literal to the multiheteroset.

@@ -1,5 +1,7 @@
 package org.ceu.alf.ecollections;
 
+import java.net.URI;
+
 /**
  * Interface for homogeneous collections.
  * 
@@ -7,4 +9,11 @@ package org.ceu.alf.ecollections;
  */
 public interface OntologyHomogeneousCollection extends OntologyCollection {
 
+  /**
+   * Method that returns the IRI of the ontology class to which the elements of the collections
+   * belongs to.
+   * 
+   * @return the IRI of the ontology class to which the elements of the collections belongs to.
+   */
+  public URI getType();
 }

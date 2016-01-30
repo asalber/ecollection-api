@@ -10,36 +10,39 @@ import org.apache.jena.rdf.model.Resource;
 
 
 /**
+ * Class that implements an ontology multiheteroset.
+ * 
  * @author Alfredo Sánchez Alberca (asalber@ceu.es)
- *
  */
 public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
-  Multiset<String> multiheteroset;
+  private Multiset<String> multiheteroset;
 
   /**
    * Default constructor for multiheterosets. It creates an empty multiheteroset.
    */
   public StandardOntologyMultiheteroset() {
-    multiheteroset = HashMultiset.create();
+    this.multiheteroset = HashMultiset.create();
   }
 
   /**
    * Constructor for multiheterosets. It creates a multiheteroset with the elements of a given GUAVA
-   * {@code HashMultiset<String>}.
+   * {@code Multiset<String>}.
+   * 
+   * @param multiheteroset
+   *          a GUAVA {@code HashMultiset<String>}.
    */
-  public StandardOntologyMultiheteroset(Multiset<String> multiset) {
-    multiheteroset = multiset;
+  public StandardOntologyMultiheteroset(Multiset<String> multiheteroset) {
+    this.multiheteroset = multiheteroset;
   }
 
-  /**
-   * Method that returns a reference to the GUAVA {@code Multiset<string>} used to store
-   * multiheterosets.
+  /*
+   * (non-Javadoc)
    * 
-   * @return the GUAVA {@code Multiset<string>} that contains the multiheteroset.
+   * @see org.ceu.alf.ecollections.OntologyCollection#getCollection()
    */
   @Override
-  public Multiset<String> getMultiset() {
-    return multiheteroset;
+  public Object getCollection() {
+    return this.multiheteroset;
   }
 
   /*
@@ -49,7 +52,7 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
    */
   @Override
   public int cardinality() {
-    return this.getMultiset().size();
+    return this.multiheteroset.size();
   }
 
   /*
@@ -59,7 +62,7 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
    */
   @Override
   public void add(String element) {
-    this.getMultiset().add(element);
+    this.multiheteroset.add(element);
   }
 
   /*
@@ -69,7 +72,7 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
    */
   @Override
   public void add(String element, int times) {
-    this.getMultiset().add(element, times);
+    this.multiheteroset.add(element, times);
   }
 
   /*
@@ -79,7 +82,7 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
    */
   @Override
   public void remove(String element) {
-    this.getMultiset().remove(element);
+    this.multiheteroset.remove(element);
   }
 
   /*
@@ -95,8 +98,8 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
     if (!(obj instanceof StandardOntologyMultiheteroset)) {
       return false;
     }
-    StandardOntologyMultiheteroset other = (StandardOntologyMultiheteroset) obj;
-    return this.getMultiset().equals(other.getMultiset());
+    OntologyMultiheteroset other = (OntologyMultiheteroset) obj;
+    return this.multiheteroset.equals(other.getCollection());
   }
 
   /*
@@ -106,7 +109,7 @@ public class StandardOntologyMultiheteroset implements OntologyMultiheteroset {
    */
   @Override
   public String toString() {
-    return this.getMultiset().toString();
+    return this.multiheteroset.toString();
   }
 
 }

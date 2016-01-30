@@ -7,4 +7,5 @@ package org.ceu.alf.ecollections;
  */
 public interface OntologyMultiset extends OntologyHomogeneousCollection, OntologyMultiheteroset {
 
+
 }

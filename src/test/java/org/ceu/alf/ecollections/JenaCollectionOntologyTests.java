@@ -1,25 +1,17 @@
 package org.ceu.alf.ecollections;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.HashSet;
-import java.util.Set;
-
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.ResIterator;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.vocabulary.RDF;
-
 import static org.junit.Assert.assertEquals;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URI;
+
 import org.junit.Before;
 import org.junit.Test;
 
 /*
- * This class test the {@code JenaCollectionOntology} class @see org.ceu.alf.ecollections.JenaCollectionOntology
+ * This class test the {@code JenaCollectionOntology} class 
+ * @see org.ceu.alf.ecollections.JenaCollectionOntology
  *
  * @author Alfredo Sánchez Alberca (asalber@ceu.es)
  */
@@ -27,7 +19,7 @@ public class JenaCollectionOntologyTests {
   private static final File ontologyFile =
       new File("src/test/resources/ontologies/ecollections-example.rdf");
   private static final String ns = "http://www.example.org/ecollections/example#";
-  CollectionOntology ontology;
+	CollectionOntologyManager ontology;
 
   /**
    * Method that load a collection ontology for testing.
@@ -37,7 +29,7 @@ public class JenaCollectionOntologyTests {
     //model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
     //reasoningModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RULE_INF);
     try {
-      ontology = new JenaCollectionOntology(ontologyFile);
+			this.ontology = new JenaCollectionOntologyManager(ontologyFile);
     } catch (FileNotFoundException e) {
       System.err.println("Error: El fichero " + ontologyFile + " no existe.");
       e.printStackTrace();
@@ -54,7 +46,7 @@ public class JenaCollectionOntologyTests {
     multiheteroset.add(ns + "a1", 3);
     multiheteroset.add(ns + "b1", 2);
     multiheteroset.add(ns + "c1", 1);
-    assertEquals(multiheteroset, ontology.getMultiheteroset(ns + "multiheteroset1"));
+    assertEquals(multiheteroset, this.ontology.getMultiheteroset(ns + "multiheteroset1"));
   }
 
   /**
@@ -68,8 +60,8 @@ public class JenaCollectionOntologyTests {
     multiheteroset.add(ns + "b2", 1);
     multiheteroset.add(ns + "c1", 2);
     assertEquals(multiheteroset,
-        OntologyMultiheterosets.union(ontology.getMultiheteroset(ns + "multiheteroset1"),
-            ontology.getMultiheteroset(ns + "multiheteroset2")));
+        OntologyMultiheterosets.union(this.ontology.getMultiheteroset(ns + "multiheteroset1"),
+            this.ontology.getMultiheteroset(ns + "multiheteroset2")));
   }
 
   /**
@@ -81,8 +73,24 @@ public class JenaCollectionOntologyTests {
     multiheteroset.add(ns + "a1", 2);
     multiheteroset.add(ns + "c1", 1);
     assertEquals(multiheteroset,
-        OntologyMultiheterosets.intersection(ontology.getMultiheteroset(ns + "multiheteroset1"),
-            ontology.getMultiheteroset(ns + "multiheteroset2")));
+        OntologyMultiheterosets.intersection(
+            this.ontology.getMultiheteroset(ns + "multiheteroset1"),
+            this.ontology.getMultiheteroset(ns + "multiheteroset2")));
+  }
+
+  /**
+   * This test checks if a multiset is got applying the getMultiset method to an ontology with a
+   * multiset.
+   * 
+   * @throws ElementOfWrongTypeException
+   */
+  @Test
+  public void getMultisetTest() throws ElementOfWrongTypeException {
+    OntologyMultiset multiset = new StandardOntologyMultiset(URI.create(ns + "ElementA"));
+    multiset.add(ns + "a1", 3);
+    multiset.add(ns + "a2", 2);
+    multiset.add(ns + "a3", 1);
+    assertEquals(multiset, this.ontology.getMultiset(ns + "multiset1"));
   }
 
 }

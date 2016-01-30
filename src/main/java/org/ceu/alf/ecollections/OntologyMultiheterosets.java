@@ -1,9 +1,6 @@
-/**
- * 
- */
 package org.ceu.alf.ecollections;
 
-import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 import com.google.common.collect.Multisets;
 
 /**
@@ -26,10 +23,12 @@ public final class OntologyMultiheterosets {
    * @return a new multiheteroset that is the union of the multiheterosets {@code multiheteroset1}
    *         and {@code multiheteroset2}.
    */
+  @SuppressWarnings("unchecked")
   public static OntologyMultiheteroset union(OntologyMultiheteroset multiheteroset1,
       OntologyMultiheteroset multiheteroset2) {
     return new StandardOntologyMultiheteroset(
-        Multisets.union(multiheteroset1.getMultiset(), multiheteroset2.getMultiset()));
+        Multisets.union((Multiset<String>) multiheteroset1.getCollection(),
+            (Multiset<String>) multiheteroset2.getCollection()));
   }
 
   /**
@@ -44,9 +43,11 @@ public final class OntologyMultiheterosets {
    * @return a new multiheteroset that is the intersection of the multiheterosets
    *         {@code multiheteroset1} and {@code multiheteroset2}.
    */
+  @SuppressWarnings("unchecked")
   public static OntologyMultiheteroset intersection(OntologyMultiheteroset multiheteroset1,
       OntologyMultiheteroset multiheteroset2) {
     return new StandardOntologyMultiheteroset(
-        Multisets.intersection(multiheteroset1.getMultiset(), multiheteroset2.getMultiset()));
+        Multisets.intersection((Multiset<String>) multiheteroset1.getCollection(),
+            (Multiset<String>) multiheteroset2.getCollection()));
   }
 }

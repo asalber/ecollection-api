@@ -78,6 +78,14 @@
     
 
 
+    <!-- http://www.example.org/ecollections/example#ElementA -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#ElementA">
+        <rdf:type rdf:resource="http://www.example.org/ecollections/example#ElementA"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.example.org/ecollections/example#a -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#a">
@@ -312,6 +320,67 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset1">
         <rdf:type rdf:resource="&eco;Multiset"/>
+        <eco:hasElementsOfType rdf:resource="http://www.example.org/ecollections/example#ElementA"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a1"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a2"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a3"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a4"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a5"/>
+        <eco:hasItem rdf:resource="http://www.example.org/ecollections/example#multiset_item_a6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a1">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a2">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a3">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a4">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a5">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ecollections/example#multiset_item_a6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/ecollections/example#multiset_item_a6">
+        <rdf:type rdf:resource="&eco;Item"/>
+        <eco:hasContent rdf:resource="http://www.example.org/ecollections/example#a3"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -29,8 +29,7 @@ public class ExistingUriException extends Exception {
    * Constructs a new exception with the specified cause.
    * 
    * @param cause
-   *          the cause. A {@code null} value is permitted, and indicates that the cause is
-   *          unknown.)
+   *          the cause that provokes the exeception.
    */
   public ExistingUriException(Throwable cause) {
     super(cause);
@@ -42,8 +41,7 @@ public class ExistingUriException extends Exception {
    * @param message
    *          the detail message.
    * @param cause
-   *          the cause. A {@code null} value is permitted, and indicates that the cause is
-   *          nonexistent or unknown.)
+   *          the cause that provokes the exception.
    */
   public ExistingUriException(String message, Throwable cause) {
     super(message, cause);

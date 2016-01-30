@@ -12,30 +12,15 @@ import java.util.Set;
  * @see <a href="http://aprendeconalf.es/ecollections/" target="_blank">E-Collections ontology</a>
  */
 public interface OntologyCollection {
-  /**
-   * The URI for the Collection class in the E-Collections ontology.
-   */
-  public static final URI CollectionUri = URI.create("http://purl.org/ceu/eco#Collection");
 
   /**
-   * The URI for the Item class in the E-Collections ontology.
+   * Method that returns a reference to the <a href=
+   * "http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/package-summary.html">
+   * GUAVA collection</a> used to store the ontology collection.
+   * 
+   * @return the GUAVA collection that contains the ontology collection.
    */
-  public static final URI ItemUri = URI.create("http://purl.org/ceu/eco#Item");
-
-  /**
-   * The URI for the hasElement object property in the E-Collections ontology.
-   */
-  public static final URI hasElementUri = URI.create("http://purl.org/ceu/eco#hasElement");
-
-  /**
-   * The URI for the hasItem object property in the E-Collections ontology.
-   */
-  public static final URI hasItemUri = URI.create("http://purl.org/ceu/eco#hasItem");
-
-  /**
-   * The URI for the hasCardinality data property in the E-Collections ontology.
-   */
-  public static final URI hasCardinalityUri = URI.create("http://purl.org/ceu/eco#hasCardinality");
+  public Object getCollection();
 
   //
   // /**
