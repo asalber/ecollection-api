@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.ceu.alf.ecollections.JenaCollectionOntologyTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-01-29T13:53:44" hostname="alf-laptop" time="5.436">
+<testsuite name="org.ceu.alf.ecollections.JenaCollectionOntologyTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-02-04T20:09:09" hostname="alf-laptop" time="2.995">
   <properties/>
-  <testcase name="intersectionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="5.415"/>
+  <testcase name="intersectionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="2.968"/>
   <testcase name="getMultisetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.008"/>
-  <testcase name="unionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.006"/>
-  <testcase name="getMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.006"/>
+  <testcase name="unionOfMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.009"/>
+  <testcase name="getMultiheterosetTest" classname="org.ceu.alf.ecollections.JenaCollectionOntologyTests" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/alf/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.3/57868006655a34050ad39e78c5b12aa9c74927f7/log4j-slf4j-impl-2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
